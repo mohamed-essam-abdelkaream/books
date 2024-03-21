@@ -26,8 +26,8 @@ class AddBookPage extends StatelessWidget {
       backgroundColor: darkColor,
       appBar: AppBar(
         backgroundColor: darkColor,
-        title: const Text('Add Book',style: TextStyle(fontWeight:FontWeight.bold, color: secondryColor),),
-        iconTheme: const IconThemeData(color: secondryColor),
+        title: const Text('Add Book',style: TextStyle(fontWeight:FontWeight.bold, color: secondColor),),
+        iconTheme: const IconThemeData(color: secondColor),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -48,7 +48,7 @@ class AddBookPage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => _addBookItem(context),
-              style : ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(secondryColor)),
+              style : ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(secondColor)),
               child: const Text('Add Book',style: TextStyle(color: primaryColor,fontSize: 16,fontWeight: FontWeight.bold),)
             ),
           ],

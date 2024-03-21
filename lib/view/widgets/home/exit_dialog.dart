@@ -17,7 +17,7 @@ class ExitConfirmationDialog extends StatelessWidget {
             Navigator.of(context).pop();
           },
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Color(0xffbc8f35)),
+            backgroundColor: MaterialStateProperty.all<Color>(const Color(0xffbc8f35)),
           ),
           child: const Text('لا',style: TextStyle(color: primaryColor,fontWeight: FontWeight.bold),),
         ),
@@ -26,7 +26,7 @@ class ExitConfirmationDialog extends StatelessWidget {
             exit(0);
           },
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Color(0xffa30000)),
+            backgroundColor: MaterialStateProperty.all<Color>(const Color(0xffa30000)),
           ),
           child: const Text('نعم',style: TextStyle(color: primaryColor,fontWeight: FontWeight.bold),),
         ),
@@ -39,7 +39,7 @@ void showExitConfirmationDialog(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
-      return ExitConfirmationDialog();
+      return const ExitConfirmationDialog();
     },
   );
 }

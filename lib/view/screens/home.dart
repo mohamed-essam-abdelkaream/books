@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
           Icon(
             Icons.sentiment_neutral_outlined,
             size: 50,
-            color: secondryColor,
+            color: secondColor,
           ),
         ],
       ),

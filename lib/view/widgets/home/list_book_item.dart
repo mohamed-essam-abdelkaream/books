@@ -69,7 +69,7 @@ class BookItemUI extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               IconButton(
-                icon: const Icon(Icons.photo, color: secondryColor,size: 30,),
+                icon: const Icon(Icons.photo, color: secondColor,size: 30,),
                 onPressed: onImageClicked,
               ),
               IconButton(

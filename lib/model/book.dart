@@ -5,12 +5,12 @@ class Book {
   String? id;
   String? bookText;
   bool isDone;
-  String? imagePath; // Add imagePath
+  String? imagePath;
 
   Book({
     required this.id,
     required this.bookText,
-    this.imagePath, // Initialize imagePath
+    this.imagePath,
     this.isDone = false,
   });
 
@@ -42,7 +42,7 @@ class Book {
     return Book(
       id: json['id'],
       bookText: json['bookText'],
-      imagePath: json['imagePath'], // Assign imagePath from JSON
+      imagePath: json['imagePath'],
       isDone: json['isDone'] ?? false,
     );
   }
@@ -51,7 +51,7 @@ class Book {
     return {
       'id': id,
       'bookText': bookText,
-      'imagePath': imagePath, // Include imagePath in JSON
+      'imagePath': imagePath,
       'isDone': isDone,
     };
   }

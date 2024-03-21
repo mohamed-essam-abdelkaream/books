@@ -12,7 +12,7 @@ class BuildHeader extends StatelessWidget {
         'All Books',
         style: TextStyle(
           fontSize: 30,
-          color: secondryColor,
+          color: secondColor,
           fontWeight: FontWeight.w500,
         ),
       ),
