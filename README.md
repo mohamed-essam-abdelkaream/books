@@ -4,13 +4,6 @@ The First Flutter project for E-localize.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Clean Modern App Portfolio Mockup Presentation (1)](https://github.com/mohamed-essam-abdelkaream/books/assets/75342235/924c41ef-6e56-40b1-a60c-d5e15c1d997f)
