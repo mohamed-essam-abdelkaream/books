@@ -1,17 +1,16 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-
 import '../../../constants/colors.dart';
 import '../../../model/book.dart';
 
 class BookItemUI extends StatelessWidget {
-  final Book todo;
+  final Book book;
   final Function(String) onDeleteItem;
   final Function() onImageClicked;
 
   const BookItemUI({
     Key? key,
-    required this.todo,
+    required this.book,
     required this.onDeleteItem,
     required this.onImageClicked,
   }) : super(key: key);
@@ -30,15 +29,15 @@ class BookItemUI extends StatelessWidget {
           title: Center(
             child: Row(
               children: [
-                todo.imagePath != null
+                book.imagePath != null
                     ? Container(
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
-                      image: FileImage(File(todo.imagePath!)),
+                      image: FileImage(File(book.imagePath!)),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -50,18 +49,17 @@ class BookItemUI extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          todo.id!,
-                          style: const TextStyle(fontSize: 18),
+                          'Book position: ${book.id!}',
+                          style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          todo.bookText!,
-                          style: const TextStyle(fontSize: 18),
+                          book.bookText!,
+                          style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
                   ),
                 ),
-
               ],
             ),
           ),
@@ -71,13 +69,13 @@ class BookItemUI extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               IconButton(
-                icon: const Icon(Icons.photo, color: primaryColor,size: 30,),
+                icon: const Icon(Icons.photo, color: secondryColor,size: 30,),
                 onPressed: onImageClicked,
               ),
               IconButton(
                 icon: const Icon(Icons.delete, color: readColor,size: 30,),
                 onPressed: () {
-                  onDeleteItem(todo.id!);
+                  onDeleteItem(book.id!);
                 },
               ),
             ],

@@ -1,3 +1,4 @@
+import 'package:books/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 
 class BuildHeader extends StatelessWidget {
@@ -11,6 +12,7 @@ class BuildHeader extends StatelessWidget {
         'All Books',
         style: TextStyle(
           fontSize: 30,
+          color: secondryColor,
           fontWeight: FontWeight.w500,
         ),
       ),

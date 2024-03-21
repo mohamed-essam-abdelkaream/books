@@ -1,15 +1,16 @@
+import 'package:books/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final TextInputType keyboardType;
-  final String hintText;
+  final String labelText;
 
   const CustomTextField({
     Key? key,
     required this.controller,
     required this.keyboardType,
-    required this.hintText,
+    required this.labelText,
   }) : super(key: key);
 
   @override
@@ -28,13 +29,13 @@ class CustomTextField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20.0),
           borderSide: const BorderSide(
-            color: Colors.blue,
+            color: secondryColor,
             width: 2.0,
           ),
         ),
-        hintText: hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
-        contentPadding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0), // المسافة بين النص والحدود
+        labelText: labelText,
+        labelStyle: const TextStyle(color: secondryColor,fontWeight: FontWeight.bold),
+        contentPadding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
         fillColor: Colors.white,
         filled: true,
       ),

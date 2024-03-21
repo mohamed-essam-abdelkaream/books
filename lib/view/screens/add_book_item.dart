@@ -23,10 +23,11 @@ class AddBookPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: whiteColor,
+      backgroundColor: darkColor,
       appBar: AppBar(
-        backgroundColor: whiteColor,
-        title: const Text('Add Book'),
+        backgroundColor: darkColor,
+        title: const Text('Add Book',style: TextStyle(fontWeight:FontWeight.bold, color: secondryColor),),
+        iconTheme: const IconThemeData(color: secondryColor),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -36,19 +37,19 @@ class AddBookPage extends StatelessWidget {
             CustomTextField(
               controller: bookIdController,
               keyboardType: TextInputType.number,
-              hintText: 'Add Book Position',
+              labelText: 'Book id',
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
             CustomTextField(
               controller: bookController,
               keyboardType: TextInputType.text,
-              hintText: 'Add new Book',
+              labelText: 'Book name',
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => _addBookItem(context),
-              style : ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(primaryColor)),
-              child: const Text('Add Book',style: TextStyle(color: whiteColor,fontSize: 16),)
+              style : ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(secondryColor)),
+              child: const Text('Add Book',style: TextStyle(color: primaryColor,fontSize: 16,fontWeight: FontWeight.bold),)
             ),
           ],
         ),
@@ -62,13 +63,12 @@ class AddBookPage extends StatelessWidget {
         id: bookIdController.text,
         bookText: bookController.text,
       );
-      // Insert the new book at the beginning of the list
       booksList.insert(0, newBook);
       saveBookListLocally(booksList);
       bookController.clear();
       bookIdController.clear();
       runFilter(bookController.text);
-      Navigator.pop(context); // Close the Add Book page
+      Navigator.pop(context);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please fill in all fields')),

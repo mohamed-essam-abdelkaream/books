@@ -30,7 +30,7 @@ class AddBookBar extends StatelessWidget {
             '+',
             style: TextStyle(
               fontSize: 30,
-              color: whiteColor,
+              color: darkColor,
             ),
           ),
         ),

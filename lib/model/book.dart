@@ -41,7 +41,7 @@ class Book {
   factory Book.fromJson(Map<String, dynamic> json) {
     return Book(
       id: json['id'],
-      bookText: json['todoText'],
+      bookText: json['bookText'],
       imagePath: json['imagePath'], // Assign imagePath from JSON
       isDone: json['isDone'] ?? false,
     );
@@ -50,7 +50,7 @@ class Book {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'todoText': bookText,
+      'bookText': bookText,
       'imagePath': imagePath, // Include imagePath in JSON
       'isDone': isDone,
     };

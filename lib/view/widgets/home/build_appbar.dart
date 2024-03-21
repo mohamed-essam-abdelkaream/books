@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../constants/colors.dart';
 
 
@@ -9,7 +8,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: whiteColor,
+      backgroundColor: darkColor,
       elevation: 0,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
