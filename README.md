@@ -1,6 +1,6 @@
 # books
 
-A new Flutter project.
+The First Flutter project for E-localize.
 
 ## Getting Started
 
